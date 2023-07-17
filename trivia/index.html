@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function correct(_this) {
+                _this.style.backgroundColor = "Green"
+                document.querySelector("#feedback1").innerHTML = "Correct!"
+            }
+            function wrong(_this) {
+                _this.style.backgroundColor = "red"
+                document.querySelector("#feedback1").innerHTML = "Incorrect!"
+                }
+            function check(_this){
+                let input = document.querySelector("input");
+                if (input.value === "Switzerland"){
+                    input.style.backgroundColor = "green";
+                    document.querySelector("#feedback2").innerHTML = "Correct!";}
+                else{
+                    input.style.backgroundColor = "red";
+                    document.querySelector("#feedback2").innerHTML = "Incorrect!";
+                }
+                }
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the aproximate ratio of people to sheep in New Zealand</h3>
+                <button onclick="wrong(this)" type="submit">6 people per 1 sheep</button>
+                <button onclick="wrong(this)" type="submit">3 people per 1 sheep</button>
+                <button onclick="wrong(this)" type="submit">1 person per 1 sheep</button>
+                <button onclick="wrong(this)" type="submit">1 person per 3 sheep</button>
+                <button onclick="correct(this)" type="submit">1 person per 6 sheep</button>
+
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In wich country is it illegal to only own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <input type="text">
+                <button onclick="check(this)" type="submit">Check answer</button>
+
+                <p id="feedback2"></p>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>
