@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>My home page</title>
+        <script type="text/javascript">
+            var opacity = 0;
+            var intervalID = 0;
+            window.onload = fadeIn;
+
+            function fadeIn() {
+                setInterval(show, 200);
+            }
+
+            function show() {
+                var body = document.getElementById("body");
+                opacity = Number(window.getComputedStyle(body)
+                                .getPropertyValue("opacity"));
+                if (opacity < 1) {
+                    opacity = opacity + 0.1;
+                    body.style.opacity = opacity
+                } else {
+                    clearInterval(intervalID);
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+    <center>
+        <h1>Retete</h1>
+        <br>
+        <table>
+            <tr>
+                <th>Aperitive</th>
+                <th>Conserve</th>
+                <th>Ciorbe si supe</th>
+            </tr>
+            <tr>
+                <td><a href="aperitive.html">Aperitiv 1</a></td>
+                <td><a href="conserve.html">Conserve 1</a></td>
+                <td><a href="supe.html">Supe si ciorbe 1</a></td>
+            </tr>
+        </table>
+        <img id="body" style="opacity: 0;" src="food.jpg" alt="some dishes">
+    </center>
+
+    </body>
+</html>

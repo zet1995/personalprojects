@@ -1,0 +1,39 @@
+.flexfill{
+    margin-bottom: 30px;
+
+}
+
+ol{
+    list-style-type: none;
+}
+
+ul {
+    list-style-type: none;
+    text-align:left;
+    padding-left:40%;
+}
+
+table, th, td {
+    border: 15px solid transparent;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+.btn{
+    margin-top:5px;
+    margin-left:10px;
+}
+.sin{
+    float:left;
+    width:100%
+}
+.sin h1 {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left:25%
+}
